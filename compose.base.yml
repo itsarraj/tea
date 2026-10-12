@@ -1,0 +1,69 @@
+name: tea
+
+services:
+  postgres:
+    image: postgres:16-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: tea
+    volumes:
+      - auth_kit_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d tea"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - auth_kit_redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  rustfs:
+    image: rustfs/rustfs:latest
+    restart: unless-stopped
+    environment:
+      RUSTFS_ALLOW_INSECURE_DEFAULT_CREDENTIALS: "true"
+    volumes:
+      - rustfs_data:/data
+      - rustfs_logs:/logs
+
+  bff:
+    build:
+      context: ./bff
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rustfs:
+        condition: service_started
+    env_file:
+      - ./bff/.env
+    environment:
+      BFF__APPLICATION_HOST: 0.0.0.0
+      BFF__DATABASE__HOST: postgres
+      BFF__DATABASE__USERNAME: postgres
+      BFF__DATABASE__PASSWORD: postgres
+      BFF__DATABASE__DATABASE_NAME: tea
+      BFF__REDIS__HOST: redis
+      BFF__STORAGE__ENDPOINT: http://rustfs:9000
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/tea
+    mem_limit: 512m
+
+volumes:
+  auth_kit_pg:
+  auth_kit_redis:
+  rustfs_data:
+  rustfs_logs:

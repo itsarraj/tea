@@ -1,0 +1,113 @@
+import subprocess
+import os
+
+LOGOS_DIR = "/home/cesium/personal/apps/tea/assets/logos"
+
+# Refined Hero: Teacup with Saucer, Heart Steam, Teabag Tag, Brutalist Shadow
+refined_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rounded App Icon Background -->
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="#ECE6C2"/>
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="none" stroke="#020202" stroke-width="14"/>
+
+  <!-- Neo-Brutalist Sparkles & Dots -->
+  <!-- Top Right 4-point star -->
+  <path d="M 412 80 Q 412 116 444 116 Q 412 116 412 152 Q 412 116 380 116 Q 412 116 412 80 Z" 
+        fill="#0EA8FF" stroke="#020202" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="450" cy="68" r="6.5" fill="#FFD166" stroke="#020202" stroke-width="4.5"/>
+  <circle cx="70" cy="180" r="8" fill="#FFD166" stroke="#020202" stroke-width="5"/>
+  <path d="M 72 114 Q 72 132 88 132 Q 72 132 72 150 Q 72 132 56 132 Q 72 132 72 114 Z" 
+        fill="#73BDA8" stroke="#020202" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- UNIFIED SHADOW LAYER (dx=14, dy=14) -->
+  <g transform="translate(14, 14)" fill="#020202" stroke="#020202">
+    <!-- Heart Steam Shadow -->
+    <path d="M 256 62 
+             C 214 6, 134 32, 138 110 
+             C 142 164, 206 208, 256 242 
+             C 306 208, 370 164, 374 110 
+             C 378 32, 298 6, 256 62 Z" stroke-width="14" stroke-linejoin="round"/>
+
+    <!-- Handle Shadow -->
+    <path d="M 334 275 C 430 275 430 375 334 375" fill="none" stroke-width="36" stroke-linecap="round"/>
+
+    <!-- Cup Body Shadow -->
+    <path d="M 142 240 L 156 376 C 158 406 186 420 256 420 C 326 420 354 406 356 376 L 370 240 Z" stroke-width="14" stroke-linejoin="round"/>
+
+    <!-- Saucer Shadow -->
+    <rect x="110" y="420" width="292" height="24" rx="12" stroke-width="14"/>
+
+    <!-- Tag Shadow -->
+    <rect x="88" y="335" width="46" height="58" rx="8" transform="rotate(-15 111 364)"/>
+  </g>
+
+  <!-- STEAM HEART (Floating Romance) -->
+  <g id="steam-heart">
+    <!-- Main Heart Silhouette -->
+    <path d="M 256 62 
+             C 214 6, 134 32, 138 110 
+             C 142 164, 206 208, 256 242 
+             C 306 208, 370 164, 374 110 
+             C 378 32, 298 6, 256 62 Z"
+          fill="#EF476F" stroke="#020202" stroke-width="13" stroke-linejoin="round"/>
+    
+    <!-- Heart Inner Highlight -->
+    <path d="M 256 90 
+             C 226 48, 168 68, 171 124 
+             C 173 160, 218 195, 256 222 
+             C 294 195, 339 160, 341 124 
+             C 344 68, 286 48, 256 90 Z"
+          fill="#FF8CA3" opacity="0.6"/>
+
+    <!-- Steam Swirls (White energetic accents) -->
+    <path d="M 212 240 C 196 215, 196 182, 222 162" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+    <path d="M 300 240 C 316 215, 316 182, 290 162" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  </g>
+
+  <!-- SAUCER BASE -->
+  <rect x="110" y="420" width="292" height="24" rx="12" fill="#ECE6C2" stroke="#020202" stroke-width="12"/>
+  <line x1="134" y1="420" x2="378" y2="420" stroke="#73BDA8" stroke-width="6"/>
+
+  <!-- CUP HANDLE -->
+  <path d="M 334 275 C 430 275 430 375 334 375" fill="none" stroke="#020202" stroke-width="36" stroke-linecap="round"/>
+  <path d="M 334 275 C 430 275 430 375 334 375" fill="none" stroke="#73BDA8" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- CUP BODY -->
+  <path d="M 142 240 L 156 376 C 158 406 186 420 256 420 C 326 420 354 406 356 376 L 370 240 Z" 
+        fill="#73BDA8" stroke="#020202" stroke-width="13" stroke-linejoin="round"/>
+
+  <!-- CUP RIM & LIQUID TEA -->
+  <ellipse cx="256" cy="240" rx="114" ry="24" fill="#020202"/>
+  <ellipse cx="256" cy="238" rx="106" ry="17" fill="#CC6B49"/>
+  <!-- Amber Tea Highlight -->
+  <path d="M 198 240 Q 256 248 314 240" fill="none" stroke="#FFD166" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- CUP FRONT BADGE: Mini Brutalist Ticket with "TEA" -->
+  <g transform="translate(256, 335)">
+    <!-- Pill ticket -->
+    <rect x="-50" y="-22" width="100" height="44" rx="10" fill="#FFFFFF" stroke="#020202" stroke-width="6"/>
+    <text x="0" y="9" font-family="'Montserrat', 'Arial Black', Arial, sans-serif" font-size="22" font-weight="900" 
+          text-anchor="middle" fill="#020202" letter-spacing="4">TEA</text>
+  </g>
+
+  <!-- TEABAG STRING & DANGLING TAG -->
+  <path d="M 180 240 Q 142 254 128 288 Q 118 314 116 340" 
+        fill="none" stroke="#020202" stroke-width="5.5" stroke-dasharray="7 5" stroke-linecap="round"/>
+
+  <!-- Hanging Tag (Electric Blue) -->
+  <g transform="rotate(-15 111 364)">
+    <rect x="88" y="335" width="46" height="58" rx="8" 
+          fill="#0EA8FF" stroke="#020202" stroke-width="6"/>
+    <!-- Tag punch hole -->
+    <circle cx="111" cy="345" r="4.5" fill="#020202"/>
+    <!-- Stamped Heart on tag -->
+    <path d="M 111 360 C 107 355 100 357 100 363 C 100 369 111 376 111 376 C 111 376 122 369 122 363 C 122 357 115 355 111 360 Z"
+          fill="#FFFFFF" stroke="#020202" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+</svg>
+"""
+
+with open(f"{LOGOS_DIR}/concept1_refined_hero.svg", "w") as f:
+    f.write(refined_svg)
+
+subprocess.run(["rsvg-convert", "-w", "512", "-h", "512", f"{LOGOS_DIR}/concept1_refined_hero.svg", "-o", f"{LOGOS_DIR}/concept1_refined_hero.png"], check=True)
+print("Refined Hero generated!")

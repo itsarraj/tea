@@ -1,0 +1,62 @@
+application_host: "0.0.0.0"
+application_port: 8000
+
+database:
+  host: "postgres"
+  port: 5432
+  username: "postgres"
+  password: "postgres"
+  database_name: "tea"
+
+redis:
+  host: "redis"
+  port: 6379
+  password: null
+  database: null
+
+jwt:
+  secret: "change-this-in-compose-env"
+  access_token_expiration_hours: 24
+  refresh_token_expiration_days: 30
+
+email:
+  api_key: ""
+  from_email: "noreply@teadating.app"
+  from_name: "Tea"
+  base_url: "http://localhost:8000"
+  frontend_base_url: "http://localhost:8081"
+
+auth:
+  require_email_verification: false
+
+oauth:
+  google:
+    client_id: null
+    client_secret: null
+    redirect_uri: null
+
+turnstile:
+  secret_key: null
+  hostnames: null
+
+storage:
+  dir: "/app/uploads"
+  public_base_url: null
+  max_upload_mb: 8
+
+sms:
+  provider: "dev"
+
+push:
+  enabled: true
+  expo_access_token: null
+
+rate_limit:
+  enabled: true
+  auth_per_minute: 10
+  api_per_minute: 240
+
+legal:
+  app_name: "Tea Dating Advice"
+  support_email: "support@teadating.app"
+  company: "Kraftisium"

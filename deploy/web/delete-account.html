@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tea Dating Advice — Delete Account & Data Deletion</title>
+  <meta name="description" content="Official instructions for deleting your Tea Dating Advice account and exercising your data rights.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #140A1A;
+      --card-bg: rgba(38, 20, 48, 0.72);
+      --card-border: rgba(221, 136, 207, 0.18);
+      --accent: #DD88CF;
+      --accent-glow: rgba(221, 136, 207, 0.25);
+      --plum: #4B164C;
+      --text: #F8F4FA;
+      --text-muted: rgba(248, 244, 250, 0.68);
+      --danger: #E5484D;
+      --danger-bg: rgba(229, 72, 77, 0.12);
+      --danger-border: rgba(229, 72, 77, 0.35);
+      --online: #13E398;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(75, 22, 76, 0.45) 0%, transparent 45%),
+        radial-gradient(circle at 85% 65%, rgba(221, 136, 207, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 95%, rgba(45, 27, 54, 0.6) 0%, transparent 60%);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--accent); text-decoration: none; transition: all 0.2s ease; }
+    a:hover { text-decoration: underline; color: #F5A9EA; }
+
+    /* Top Navigation */
+    header {
+      background: rgba(20, 10, 26, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: #FFF;
+      letter-spacing: -0.02em;
+    }
+    .brand svg { width: 32px; height: 32px; border-radius: 8px; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .nav-links a { color: var(--text-muted); }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); text-decoration: none; }
+    .nav-btn {
+      background: linear-gradient(135deg, #DD88CF 0%, #B85AA8 100%);
+      color: #140A1A !important;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-weight: 700;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    .nav-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(221, 136, 207, 0.35); text-decoration: none; }
+
+    /* Main Container */
+    main {
+      flex: 1;
+      max-width: 960px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-border);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #FFA5A8;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-size: 2.85rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #FFFFFF 20%, #DD88CF 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(75, 22, 76, 0.8) 0%, rgba(221, 136, 207, 0.25) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .icon-box.danger {
+      background: var(--danger-bg);
+      color: var(--danger);
+      border: 1px solid var(--danger-border);
+    }
+    .card h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #FFF;
+    }
+    .card p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    /* Steps */
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .step-item {
+      display: flex;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 18px 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #140A1A;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.95rem;
+    }
+    .step-content h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 4px;
+    }
+    .step-content p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin: 0;
+    }
+
+    /* Highlight Banner */
+    .callout-box {
+      background: rgba(19, 227, 152, 0.08);
+      border: 1px solid rgba(19, 227, 152, 0.25);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #B5F7DC;
+      font-size: 0.95rem;
+    }
+
+    /* Email Action Button */
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #E5484D 0%, #C43439 100%);
+      color: #FFF !important;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(229, 72, 77, 0.35);
+      transition: all 0.2s ease;
+      margin-top: 10px;
+    }
+    .btn-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(229, 72, 77, 0.5);
+      text-decoration: none;
+    }
+
+    /* Table Breakdown */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+    .data-table th, .data-table td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .data-table th {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .data-table td {
+      color: var(--text-muted);
+    }
+    .badge-wipe {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: var(--danger-bg);
+      color: #FFA5A8;
+      border: 1px solid var(--danger-border);
+    }
+    .badge-retain {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      background: rgba(20, 10, 26, 0.9);
+      padding: 40px 24px;
+      margin-top: auto;
+    }
+    .footer-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a { color: var(--text-muted); }
+    .footer-links a:hover { color: var(--text); }
+    .copyright {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .card { padding: 24px 20px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <svg viewBox="0 0 95 87" fill="none">
+          <path d="M32.8949 25.4469C31.6033 25.1575 30.9936 23.9382 31.5413 22.7292L39.5599 5.1522C40.1076 3.9432 42.7943 4.29453 43.6003 4.88353C44.4063 5.48287 45.3259 7.0122 45.6463 8.30386L50.3479 27.2035C50.6683 28.4849 49.8726 29.2909 48.5809 29.0015L32.8949 25.4469Z" fill="#F7374E"/>
+          <path d="M31.3552 43.789C31.7169 45.0704 31.6756 47.137 31.2622 48.3977L26.1679 64.094C25.7546 65.3444 24.6592 65.613 23.7189 64.6727L9.54156 50.4954C8.61156 49.5654 8.61156 48.036 9.54156 47.0957L14.8012 41.8464C15.7312 40.906 16.4959 40.1414 16.4959 40.1414C16.4959 40.1414 17.2709 39.3767 18.2009 38.4364L25.6099 31.0274C26.5502 30.0974 27.6042 30.3764 27.9556 31.6474L31.3552 43.789Z" fill="#F7374E"/>
+          <path d="M9.52091 42.3523C7.33025 44.543 -1.22576 31.8123 0.148573 25.385C1.52291 18.9576 4.27158 14.6383 6.26591 15.7853C8.24991 16.9323 10.6989 22.4813 11.7012 28.113C12.7036 33.755 11.7219 40.1616 9.52091 42.3523V42.3523Z" fill="#E80356"/>
+          <path d="M84.9335 24.2179C85.7912 21.4382 88.1782 20.8492 90.2449 22.9056L91.9292 24.6002C93.9856 26.6566 95.2359 30.6866 94.7089 33.5386L91.2679 42.2186C89.7902 44.7296 86.6799 45.3289 84.3652 43.5619L84.1896 43.4379C81.8749 41.6709 80.6762 37.9509 81.5442 35.1713L84.9335 24.2179Z" fill="#E80356"/>
+          <path d="M46.8759 61.9752C47.7956 62.9259 48.3639 64.7652 48.1365 66.0672L45.0882 83.2516C44.8505 84.5536 43.8999 84.8532 42.9596 83.9232L29.7949 70.7482C28.8545 69.8079 28.4309 68.0202 28.8339 66.7596L33.7629 51.6006C34.1762 50.3399 35.2612 50.0919 36.1912 51.0322L46.8759 61.9752Z" fill="#A3195B"/>
+          <path d="M84.3032 47.7568C85.3572 48.5524 85.4502 49.9784 84.5202 50.9084L73.2569 62.1718C72.3269 63.1018 70.4875 63.7424 69.1649 63.5978L56.9405 62.2028C55.6282 62.0478 55.4009 61.2418 56.4239 60.4151L76.1812 44.5018C77.2042 43.6751 78.9092 43.6441 79.9632 44.4501L84.3032 47.7568Z" fill="#F7374E"/>
+          <path d="M49.2732 8.91384C48.9529 7.62217 49.6245 6.03083 50.7612 5.35917L64.5872 0.058169C65.8892 -0.189831 67.7182 0.378504 68.6482 1.31884L76.9355 9.60617C77.8759 10.5465 77.7622 11.9415 76.6875 12.7165L56.1965 27.5448C55.1322 28.3198 53.9955 27.9065 53.6752 26.6148L49.2732 8.91384Z" fill="#D60B52"/>
+          <path d="M73.8252 1.73212C72.8849 0.79179 73.1535 0.368122 74.4039 0.781455C74.4039 0.781455 83.0632 3.61279 87.3722 7.92179C91.6812 12.2308 94.5125 20.8798 94.5125 20.8798C94.9259 22.1405 94.5022 22.3988 93.5619 21.4688L73.8252 1.73212Z" fill="#A3195B"/>
+        </svg>
+        <span>Tea Dating Advice</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/delete-account" class="active">Delete Account</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:support@kraftisium.xyz" class="nav-btn">Get Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="hero-badge">Account & Data Rights</div>
+      <h1>Delete Your Tea Dating Advice Account</h1>
+      <p>You have full, unconditional control over your data. Follow the simple steps below to permanently delete your account and all associated records.</p>
+    </div>
+
+    <!-- Option 1: In App -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box danger">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h2>Option 1: In the App (Instant Self-Serve)</h2>
+      </div>
+      <p>If you have the Tea Dating Advice app installed on your Android or iOS device, you can delete your account immediately:</p>
+
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Open Tea & Go to Profile</h3>
+            <p>Open the app, make sure you are signed in, and tap the <strong>Profile (Me)</strong> tab in the bottom bar.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Open Settings</h3>
+            <p>Tap the <strong>Settings (gear icon)</strong> in the top-right corner of your profile.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Tap &ldquo;Delete account&rdquo;</h3>
+            <p>Scroll down to the Danger Zone section and select <strong>Delete account</strong>.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>Confirm Deletion</h3>
+            <p>Confirm the prompt. Your session ends immediately, and your account data is wiped.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span><strong>Immediate Hard Delete:</strong> Your profile is unlinked, dating dilemmas and verdicts are removed, and consultations are purged from storage right away.</span>
+      </div>
+    </div>
+
+    <!-- Option 2: Web / Email Request -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h2>Option 2: Email Request (If App Is Uninstalled)</h2>
+      </div>
+      <p>
+        If you have uninstalled Tea, lost access to your device, or cannot log in, email our support team directly. We will verify account ownership and process the deletion within 48 hours.
+      </p>
+
+      <a href="mailto:support@kraftisium.xyz?subject=Tea Account Deletion Request&body=Hi, please delete my Tea Dating Advice account and all associated data for the following registered email address: " class="btn-action">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Send Deletion Request Email
+      </a>
+      <p style="margin-top: 14px; font-size: 0.9rem; color: rgba(255,255,255,0.5);">
+        Direct email: <code>support@kraftisium.xyz</code> (Subject: <em>Tea Account Deletion Request</em>)
+      </p>
+    </div>
+
+    <!-- What Gets Deleted -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h2>What Gets Deleted</h2>
+      </div>
+      <p>When an account is deleted, our backend executes a cascading database purge:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data Category</th>
+            <th>Specific Items</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Authentication & Identity</strong></td>
+            <td>Email, password hash, phone number, OAuth links</td>
+            <td><span class="badge-wipe">Permanently Erased</span></td>
+          </tr>
+          <tr>
+            <td><strong>Profile Information</strong></td>
+            <td>Display name, handle, permanent avatar style, bio, city</td>
+            <td><span class="badge-wipe">Permanently Erased</span></td>
+          </tr>
+          <tr>
+            <td><strong>Advice & Dilemmas</strong></td>
+            <td>All posted advice dilemmas, spilled tea, and verdict comments</td>
+            <td><span class="badge-wipe">Permanently Erased</span></td>
+          </tr>
+          <tr>
+            <td><strong>Verdicts & Bookmarks</strong></td>
+            <td>Flag votes (red, green, valid), saved posts, and followers</td>
+            <td><span class="badge-wipe">Permanently Erased</span></td>
+          </tr>
+          <tr>
+            <td><strong>Device Information</strong></td>
+            <td>Push notification tokens and active sessions</td>
+            <td><span class="badge-wipe">Revoked & Deleted</span></td>
+          </tr>
+          <tr>
+            <td><strong>Safety Records</strong></td>
+            <td>Harassment reports or abuse bans (if applicable)</td>
+            <td><span class="badge-retain">Retained for Legal Compliance</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Partial Deletion -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <h2>Delete Specific Data (Without Deleting Account)</h2>
+      </div>
+      <p>You can remove individual parts of your profile at any time while keeping your account active:</p>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+        <li style="color: var(--text-muted); font-size: 0.95rem;">&bull; <strong>Bio & Location:</strong> Open <em>Profile &rarr; Edit Profile</em> and clear or modify your bio, city, or display name.</li>
+        <li style="color: var(--text-muted); font-size: 0.95rem;">&bull; <strong>Dilemmas:</strong> Delete individual advice posts directly from your profile.</li>
+        <li style="color: var(--text-muted); font-size: 0.95rem;">&bull; <strong>Direct Consultations:</strong> Clear individual chat messages or block abusive advisors.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/delete-account">Delete Account</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="mailto:support@kraftisium.xyz">Contact Support</a>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Tea Dating Advice &bull; A Kraftisium Product. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

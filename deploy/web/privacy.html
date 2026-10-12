@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tea Dating Advice — Privacy Policy</title>
+  <meta name="description" content="Official Privacy Policy for the Tea Dating Advice mobile application and services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #140A1A;
+      --card-bg: rgba(38, 20, 48, 0.72);
+      --card-border: rgba(221, 136, 207, 0.18);
+      --accent: #DD88CF;
+      --accent-glow: rgba(221, 136, 207, 0.25);
+      --plum: #4B164C;
+      --text: #F8F4FA;
+      --text-muted: rgba(248, 244, 250, 0.68);
+      --online: #13E398;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(75, 22, 76, 0.45) 0%, transparent 45%),
+        radial-gradient(circle at 85% 65%, rgba(221, 136, 207, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 95%, rgba(45, 27, 54, 0.6) 0%, transparent 60%);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--accent); text-decoration: none; transition: all 0.2s ease; }
+    a:hover { text-decoration: underline; color: #F5A9EA; }
+
+    /* Top Navigation */
+    header {
+      background: rgba(20, 10, 26, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: #FFF;
+      letter-spacing: -0.02em;
+    }
+    .brand svg { width: 32px; height: 32px; border-radius: 8px; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .nav-links a { color: var(--text-muted); }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); text-decoration: none; }
+    .nav-btn {
+      background: linear-gradient(135deg, #DD88CF 0%, #B85AA8 100%);
+      color: #140A1A !important;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-weight: 700;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    .nav-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(221, 136, 207, 0.35); text-decoration: none; }
+
+    /* Main Container */
+    main {
+      flex: 1;
+      max-width: 960px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(221, 136, 207, 0.12);
+      border: 1px solid rgba(221, 136, 207, 0.3);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-size: 2.85rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #FFFFFF 20%, #DD88CF 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* Trust Pill Badges */
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .trust-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .trust-pill svg { color: var(--online); }
+
+    /* Content Cards */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: border-color 0.2s ease;
+    }
+    .card:hover {
+      border-color: rgba(221, 136, 207, 0.35);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(75, 22, 76, 0.8) 0%, rgba(221, 136, 207, 0.25) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .card h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #FFF;
+    }
+    .card p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    .card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .card li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--text-muted);
+      font-size: 0.97rem;
+    }
+    .card li strong {
+      color: #FFF;
+    }
+    .card li::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* Subgrid items */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .sub-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .sub-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sub-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Deletion Banner */
+    .deletion-banner {
+      background: linear-gradient(135deg, rgba(75, 22, 76, 0.5) 0%, rgba(221, 136, 207, 0.15) 100%);
+      border: 1px solid rgba(221, 136, 207, 0.35);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .deletion-text h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 4px;
+    }
+    .deletion-text p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      background: rgba(20, 10, 26, 0.9);
+      padding: 40px 24px;
+      margin-top: auto;
+    }
+    .footer-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a { color: var(--text-muted); }
+    .footer-links a:hover { color: var(--text); }
+    .copyright {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .card { padding: 24px 20px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <svg viewBox="0 0 95 87" fill="none">
+          <path d="M32.8949 25.4469C31.6033 25.1575 30.9936 23.9382 31.5413 22.7292L39.5599 5.1522C40.1076 3.9432 42.7943 4.29453 43.6003 4.88353C44.4063 5.48287 45.3259 7.0122 45.6463 8.30386L50.3479 27.2035C50.6683 28.4849 49.8726 29.2909 48.5809 29.0015L32.8949 25.4469Z" fill="#F7374E"/>
+          <path d="M31.3552 43.789C31.7169 45.0704 31.6756 47.137 31.2622 48.3977L26.1679 64.094C25.7546 65.3444 24.6592 65.613 23.7189 64.6727L9.54156 50.4954C8.61156 49.5654 8.61156 48.036 9.54156 47.0957L14.8012 41.8464C15.7312 40.906 16.4959 40.1414 16.4959 40.1414C16.4959 40.1414 17.2709 39.3767 18.2009 38.4364L25.6099 31.0274C26.5502 30.0974 27.6042 30.3764 27.9556 31.6474L31.3552 43.789Z" fill="#F7374E"/>
+          <path d="M9.52091 42.3523C7.33025 44.543 -1.22576 31.8123 0.148573 25.385C1.52291 18.9576 4.27158 14.6383 6.26591 15.7853C8.24991 16.9323 10.6989 22.4813 11.7012 28.113C12.7036 33.755 11.7219 40.1616 9.52091 42.3523V42.3523Z" fill="#E80356"/>
+          <path d="M84.9335 24.2179C85.7912 21.4382 88.1782 20.8492 90.2449 22.9056L91.9292 24.6002C93.9856 26.6566 95.2359 30.6866 94.7089 33.5386L91.2679 42.2186C89.7902 44.7296 86.6799 45.3289 84.3652 43.5619L84.1896 43.4379C81.8749 41.6709 80.6762 37.9509 81.5442 35.1713L84.9335 24.2179Z" fill="#E80356"/>
+          <path d="M46.8759 61.9752C47.7956 62.9259 48.3639 64.7652 48.1365 66.0672L45.0882 83.2516C44.8505 84.5536 43.8999 84.8532 42.9596 83.9232L29.7949 70.7482C28.8545 69.8079 28.4309 68.0202 28.8339 66.7596L33.7629 51.6006C34.1762 50.3399 35.2612 50.0919 36.1912 51.0322L46.8759 61.9752Z" fill="#A3195B"/>
+          <path d="M84.3032 47.7568C85.3572 48.5524 85.4502 49.9784 84.5202 50.9084L73.2569 62.1718C72.3269 63.1018 70.4875 63.7424 69.1649 63.5978L56.9405 62.2028C55.6282 62.0478 55.4009 61.2418 56.4239 60.4151L76.1812 44.5018C77.2042 43.6751 78.9092 43.6441 79.9632 44.4501L84.3032 47.7568Z" fill="#F7374E"/>
+          <path d="M49.2732 8.91384C48.9529 7.62217 49.6245 6.03083 50.7612 5.35917L64.5872 0.058169C65.8892 -0.189831 67.7182 0.378504 68.6482 1.31884L76.9355 9.60617C77.8759 10.5465 77.7622 11.9415 76.6875 12.7165L56.1965 27.5448C55.1322 28.3198 53.9955 27.9065 53.6752 26.6148L49.2732 8.91384Z" fill="#D60B52"/>
+          <path d="M73.8252 1.73212C72.8849 0.79179 73.1535 0.368122 74.4039 0.781455C74.4039 0.781455 83.0632 3.61279 87.3722 7.92179C91.6812 12.2308 94.5125 20.8798 94.5125 20.8798C94.9259 22.1405 94.5022 22.3988 93.5619 21.4688L73.8252 1.73212Z" fill="#A3195B"/>
+        </svg>
+        <span>Tea Dating Advice</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/privacy" class="active">Privacy Policy</a>
+        <a href="/delete-account">Delete Account</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:support@kraftisium.xyz" class="nav-btn">Get Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="hero-badge">Transparent & Secure</div>
+      <h1>Tea Dating Advice Privacy Policy</h1>
+      <p>Effective Date: October 2026 &bull; Applies to Tea Dating Advice on Android and iOS</p>
+
+      <div class="trust-badges">
+        <div class="trust-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          TLS 1.3 Encrypted Transit
+        </div>
+        <div class="trust-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          Zero Third-Party Ad Trackers
+        </div>
+        <div class="trust-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          Strictly 18+ Adults Only
+        </div>
+        <div class="trust-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+          Instant Hard Deletion
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        </div>
+        <h2>1. Commitment & Scope</h2>
+      </div>
+      <p>
+        Tea Dating Advice (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;), operated by Kraftisium (https://tea.kraftisium.xyz), respects and protects the personal privacy of our community members. This Privacy Policy discloses exactly how we collect, handle, store, and purge your information when using the Tea Dating Advice mobile application and our backend-for-frontend services.
+      </p>
+      <p>
+        <strong>Our fundamental pledge:</strong> We do not sell, rent, or trade your personal data to data brokers or third-party marketers. We do not incorporate external ad networks or tracking SDKs.
+      </p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+        </div>
+        <h2>2. Information We Collect</h2>
+      </div>
+      <p>To deliver real-time dating advice and verdict features, Tea Dating Advice collects specific categories of user data:</p>
+
+      <div class="grid-cards">
+        <div class="sub-card">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Account & Identity
+          </h3>
+          <p>Full name, email address, password hash, date of birth (enforces 18+ policy), and optional phone number or Google Sign-In ID.</p>
+        </div>
+
+        <div class="sub-card">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photos & Profile
+          </h3>
+          <p>Profile photos uploaded from camera or photo library, bio, occupation, university, relationship goals, lifestyle traits, and interests.</p>
+        </div>
+
+        <div class="sub-card">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Location Data
+          </h3>
+          <p>Approximate and fine location accessed only with your runtime consent while using Discover to compute distance to nearby matches. Never tracked in background.</p>
+        </div>
+
+        <div class="sub-card">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Chats & Matches
+          </h3>
+          <p>Swipes (likes/passes), mutual matches, private 1-on-1 chat messages, feed posts, daily stories, and user blocks/reports.</p>
+        </div>
+
+        <div class="sub-card">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+            Device & Push Tokens
+          </h3>
+          <p>FCM/APNS push notification tokens for match/message alerts, IP address for security, abuse detection, and rate limiting.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h2>3. How We Use Your Data</h2>
+      </div>
+      <ul>
+        <li><strong>Nearby Matching & Discovery:</strong> To show you compatible profiles in your city and calculate relative distance in kilometers/miles.</li>
+        <li><strong>Messaging & Social Connection:</strong> To allow real-time private communication between users who have mutually liked each other.</li>
+        <li><strong>Community Safety & Moderation:</strong> To verify users are 18+, protect members from impersonation, and process safety reports and blocks.</li>
+        <li><strong>Push Notifications:</strong> To alert you instantly when you receive a new like, mutual match, or chat message (customizable in your phone's notification settings).</li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h2>4. Information Sharing</h2>
+      </div>
+      <p>
+        Your profile (display name, handle, permanent avatar, city, bio, and dating advice categories) is visible to other Tea Dating Advice users.
+      </p>
+      <ul>
+        <li><strong>Private 1-on-1 Consultations:</strong> Direct messages are visible solely to you and the consulting advisor.</li>
+        <li><strong>Zero Camera / Photo Access:</strong> Tea Dating Advice is strictly text-only. We never request camera permissions or upload photos.</li>
+        <li><strong>Infrastructure Partners:</strong> We work strictly with enterprise infrastructure providers (database hosting, push notification gateways, SMS/email OTP delivery) bound by non-disclosure agreements.</li>
+        <li><strong>No Third-Party Advertising:</strong> We never share or sell personal data to advertisers, aggregators, or third-party marketing services.</li>
+      </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+        </div>
+        <h2>5. Data Retention & Account Deletion</h2>
+      </div>
+      <p>
+        We keep your personal information only while your account is active. You maintain unconditional rights to remove your data at any time:
+      </p>
+
+      <div class="deletion-banner">
+        <div class="deletion-text">
+          <h4>Looking to delete your account or data?</h4>
+          <p>You can perform an instant hard deletion in the Tea Dating Advice app or submit a web request.</p>
+        </div>
+        <a href="/delete-account" class="nav-btn">View Deletion Instructions &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h2>6. 18+ Adults-Only Community</h2>
+      </div>
+      <p>
+        Tea Dating Advice is designed and operated exclusively for individuals who are 18 years of age or older. We enforce date-of-birth verification during signup. If we discover that an account has been created by a minor under 18, the account and all associated data are terminated immediately.
+      </p>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h2>7. Contact & Data Protection</h2>
+      </div>
+      <p>
+        For inquiries regarding this Privacy Policy, your rights under GDPR/CCPA, or data handling, reach our team directly:
+      </p>
+      <p style="margin-bottom: 0;">
+        <strong>Email:</strong> <a href="mailto:support@kraftisium.xyz">support@kraftisium.xyz</a><br>
+        <strong>Company:</strong> Kraftisium<br>
+        <strong>Web:</strong> <a href="https://tea.kraftisium.xyz">https://tea.kraftisium.xyz</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/delete-account">Delete Account</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="mailto:support@kraftisium.xyz">Contact Support</a>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Tea Dating Advice &bull; A Kraftisium Product. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

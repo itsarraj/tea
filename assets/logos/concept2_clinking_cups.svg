@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rounded App Icon Background -->
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="#ECE6C2"/>
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="none" stroke="#020202" stroke-width="14"/>
+
+  <!-- Accents -->
+  <path d="M 256 36 Q 256 56 274 56 Q 256 56 256 76 Q 256 56 238 56 Q 256 56 256 36 Z" 
+        fill="#FFD166" stroke="#020202" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="85" cy="110" r="7" fill="#0EA8FF" stroke="#020202" stroke-width="4"/>
+  <circle cx="430" cy="110" r="7" fill="#EF476F" stroke="#020202" stroke-width="4"/>
+
+  <!-- Unified Hard Shadow -->
+  <g transform="translate(12, 12)" fill="#020202" stroke="#020202">
+    <!-- Heart Steam Shadow -->
+    <path d="M 256 90 
+             C 220 40, 155 60, 160 130 
+             C 163 175, 215 215, 256 245 
+             C 297 215, 349 175, 352 130 
+             C 357 60, 292 40, 256 90 Z" stroke-width="12"/>
+    <!-- Left Cup Shadow -->
+    <g transform="rotate(-14 200 340)">
+      <path d="M 120 280 C 70 280 70 360 120 360" fill="none" stroke-width="28" stroke-linecap="round"/>
+      <rect x="120" y="250" width="120" height="130" rx="20"/>
+    </g>
+    <!-- Right Cup Shadow -->
+    <g transform="rotate(14 312 340)">
+      <path d="M 392 280 C 442 280 442 360 392 360" fill="none" stroke-width="28" stroke-linecap="round"/>
+      <rect x="272" y="250" width="120" height="130" rx="20"/>
+    </g>
+  </g>
+
+  <!-- HEART STEAM IN CENTER -->
+  <g id="steam-heart">
+    <path d="M 256 90 
+             C 220 40, 155 60, 160 130 
+             C 163 175, 215 215, 256 245 
+             C 297 215, 349 175, 352 130 
+             C 357 60, 292 40, 256 90 Z"
+          fill="#EF476F" stroke="#020202" stroke-width="12" stroke-linejoin="round"/>
+    <!-- Inner Heart Glow -->
+    <path d="M 256 112 
+             C 230 76, 182 92, 185 140 
+             C 187 170, 224 200, 256 224 
+             C 288 200, 325 170, 327 140 
+             C 330 92, 282 76, 256 112 Z"
+          fill="#FF8CA3" opacity="0.6"/>
+    <!-- Floating steam sparkles -->
+    <circle cx="256" cy="155" r="8" fill="#FFFFFF"/>
+  </g>
+
+  <!-- LEFT CUP (Mint Green) -->
+  <g transform="rotate(-14 200 340)">
+    <!-- Handle -->
+    <path d="M 120 280 C 70 280 70 360 120 360" fill="none" stroke="#020202" stroke-width="28" stroke-linecap="round"/>
+    <path d="M 120 280 C 70 280 70 360 120 360" fill="none" stroke="#73BDA8" stroke-width="14" stroke-linecap="round"/>
+    <!-- Cup Body -->
+    <rect x="120" y="250" width="120" height="130" rx="22" fill="#73BDA8" stroke="#020202" stroke-width="11"/>
+    <!-- Tea Liquid Inside -->
+    <ellipse cx="180" cy="254" rx="52" ry="12" fill="#CC6B49" stroke="#020202" stroke-width="5"/>
+    <!-- Decorative band -->
+    <rect x="135" y="295" width="90" height="36" rx="8" fill="#FFFFFF" stroke="#020202" stroke-width="5"/>
+    <text x="180" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle" fill="#020202">YOU</text>
+  </g>
+
+  <!-- RIGHT CUP (Terracotta Coral) -->
+  <g transform="rotate(14 312 340)">
+    <!-- Handle -->
+    <path d="M 392 280 C 442 280 442 360 392 360" fill="none" stroke="#020202" stroke-width="28" stroke-linecap="round"/>
+    <path d="M 392 280 C 442 280 442 360 392 360" fill="none" stroke="#CC6B49" stroke-width="14" stroke-linecap="round"/>
+    <!-- Cup Body -->
+    <rect x="272" y="250" width="120" height="130" rx="22" fill="#CC6B49" stroke="#020202" stroke-width="11"/>
+    <!-- Tea Liquid Inside -->
+    <ellipse cx="332" cy="254" rx="52" ry="12" fill="#FFD166" stroke="#020202" stroke-width="5"/>
+    <!-- Decorative band -->
+    <rect x="287" y="295" width="90" height="36" rx="8" fill="#FFFFFF" stroke="#020202" stroke-width="5"/>
+    <text x="332" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle" fill="#020202">DATE</text>
+  </g>
+
+  <!-- CLINK / CHEERS SPARK BURST IN CENTER -->
+  <g transform="translate(256, 290)">
+    <circle cx="0" cy="0" r="14" fill="#FFD166" stroke="#020202" stroke-width="5"/>
+    <path d="M -22 -14 L -8 -6 M 22 -14 L 8 -6 M 0 -22 L 0 -10" stroke="#020202" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

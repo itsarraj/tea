@@ -1,0 +1,136 @@
+# Tea Dating Advice production stack for the shared Kraftisium VPS (prod@185.139.7.99).
+#
+#   docker compose -f compose.prod.yml --env-file bff/.env.prod up -d
+#
+# Lessons baked in from previous deploys:
+#   - Docker's embedded DNS is broken on this VPS -> fixed IPs on a private subnet,
+#     services reference each other by IP, and the containers get public resolvers.
+#   - 4 GB RAM -> the BFF image is built locally and shipped (scripts/vps-deploy.sh),
+#     never built on the VPS. mem_limit keeps a runaway process from taking the box.
+#   - Healthchecks must GET (HEAD is not routed); the image has curl installed.
+#   - Ports: BFF 8014, RustFS 9014; Postgres/Redis stay off the host.
+
+name: tea
+
+networks:
+  tea:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.31.44.0/24
+
+services:
+  postgres:
+    image: postgres:16-bookworm
+    restart: unless-stopped
+    networks:
+      tea:
+        ipv4_address: 172.31.44.10
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-tea}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in bff/.env.prod}
+      POSTGRES_DB: ${POSTGRES_DB:-tea}
+    volumes:
+      - tea_pg:/var/lib/postgresql/data
+    command: ["postgres", "-c", "shared_buffers=128MB", "-c", "max_connections=60"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tea} -d ${POSTGRES_DB:-tea}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    mem_limit: 512m
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    networks:
+      tea:
+        ipv4_address: 172.31.44.11
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "96mb", "--maxmemory-policy", "allkeys-lru"]
+    volumes:
+      - tea_redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    mem_limit: 160m
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+
+  rustfs:
+    image: rustfs/rustfs:latest
+    restart: unless-stopped
+    networks:
+      tea:
+        ipv4_address: 172.31.44.12
+    environment:
+      RUSTFS_ALLOW_INSECURE_DEFAULT_CREDENTIALS: "true"
+    volumes:
+      - tea_rustfs:/data
+      - tea_rustfs_logs:/logs
+    ports:
+      - "127.0.0.1:9014:9000"
+    mem_limit: 128m
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+
+  bff:
+    image: ${BFF_IMAGE:-tea-bff:latest}
+    restart: unless-stopped
+    networks:
+      tea:
+        ipv4_address: 172.31.44.20
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rustfs:
+        condition: service_started
+    env_file:
+      - ./bff/.env.prod
+    environment:
+      BFF__APPLICATION_HOST: 0.0.0.0
+      BFF__APPLICATION_PORT: "8000"
+      BFF__DATABASE__HOST: 172.31.44.10
+      BFF__DATABASE__PORT: "5432"
+      BFF__DATABASE__USERNAME: ${POSTGRES_USER:-tea}
+      BFF__DATABASE__PASSWORD: ${POSTGRES_PASSWORD}
+      BFF__DATABASE__DATABASE_NAME: ${POSTGRES_DB:-tea}
+      BFF__REDIS__HOST: 172.31.44.11
+      BFF__REDIS__PORT: "6379"
+      BFF__STORAGE__ENDPOINT: http://172.31.44.12:9000
+      BFF__STORAGE__DIR: /app/uploads
+      DATABASE_URL: postgres://${POSTGRES_USER:-tea}:${POSTGRES_PASSWORD}@172.31.44.10:5432/${POSTGRES_DB:-tea}
+      RUST_LOG: info
+    ports:
+      - "127.0.0.1:8014:8000"
+    volumes:
+      - tea_uploads:/app/uploads
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/api/v1/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+    mem_limit: 512m
+    logging:
+      driver: json-file
+      options: { max-size: "20m", max-file: "5" }
+
+volumes:
+  tea_pg:
+  tea_redis:
+  tea_rustfs:
+  tea_rustfs_logs:
+  tea_uploads:
+

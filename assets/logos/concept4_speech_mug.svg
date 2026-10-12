@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rounded App Icon Background -->
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="#ECE6C2"/>
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="none" stroke="#020202" stroke-width="14"/>
+
+  <!-- Accents -->
+  <circle cx="85" cy="95" r="8" fill="#FFD166" stroke="#020202" stroke-width="5"/>
+  <path d="M 425 80 Q 425 105 445 105 Q 425 105 425 130 Q 425 105 405 105 Q 425 105 425 80 Z" 
+        fill="#0EA8FF" stroke="#020202" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- Unified Hard Shadow -->
+  <g transform="translate(12, 12)" fill="#020202" stroke="#020202">
+    <!-- Speech Bubble Shadow -->
+    <path d="M 140 70 L 372 70 C 400 70, 420 90, 420 118 L 420 182 C 420 210, 400 230, 372 230 L 270 230 L 220 270 L 230 230 L 140 230 C 112 230, 92 210, 92 182 L 92 118 C 92 90, 112 70, 140 70 Z" stroke-width="12"/>
+    <!-- Handle Shadow -->
+    <path d="M 330 310 C 415 310 415 400 330 400" fill="none" stroke-width="32" stroke-linecap="round"/>
+    <!-- Cup Shadow -->
+    <path d="M 150 280 L 160 400 C 162 430 190 445 256 445 C 322 445 350 430 352 400 L 362 280 Z" stroke-width="12"/>
+  </g>
+
+  <!-- SPEECH BUBBLE STEAM ("Spilling Tea" / Dating Dilemma Advice) -->
+  <path d="M 140 70 L 372 70 C 400 70, 420 90, 420 118 L 420 182 C 420 210, 400 230, 372 230 L 270 230 L 220 270 L 230 230 L 140 230 C 112 230, 92 210, 92 182 L 92 118 C 92 90, 112 70, 140 70 Z" 
+        fill="#FFFFFF" stroke="#020202" stroke-width="12" stroke-linejoin="round"/>
+
+  <!-- Content inside speech bubble: Heart + Dialogue dots -->
+  <g transform="translate(256, 150)">
+    <!-- Big romantic heart in speech bubble -->
+    <path d="M 0 -36 
+             C -24 -62, -62 -48, -58 -10 
+             C -55 20, -18 46, 0 64 
+             C 18 46, 55 20, 58 -10 
+             C 62 -48, 24 -62, 0 -36 Z"
+          fill="#EF476F" stroke="#020202" stroke-width="7" stroke-linejoin="round"/>
+    <circle cx="-85" cy="0" r="10" fill="#73BDA8" stroke="#020202" stroke-width="5"/>
+    <circle cx="85" cy="0" r="10" fill="#0EA8FF" stroke="#020202" stroke-width="5"/>
+  </g>
+
+  <!-- CUP HANDLE -->
+  <path d="M 330 310 C 415 310 415 400 330 400" fill="none" stroke="#020202" stroke-width="32" stroke-linecap="round"/>
+  <path d="M 330 310 C 415 310 415 400 330 400" fill="none" stroke="#73BDA8" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- CUP BODY -->
+  <path d="M 150 280 L 160 400 C 162 430 190 445 256 445 C 322 445 350 430 352 400 L 362 280 Z" 
+        fill="#73BDA8" stroke="#020202" stroke-width="12" stroke-linejoin="round"/>
+
+  <!-- Cup Rim -->
+  <ellipse cx="256" cy="280" rx="106" ry="22" fill="#020202"/>
+  <ellipse cx="256" cy="278" rx="98" ry="16" fill="#CC6B49"/>
+
+  <!-- Cup Graphic: "SPILL IT" Pill -->
+  <g transform="translate(256, 362)">
+    <rect x="-56" y="-20" width="112" height="40" rx="20" fill="#FFFFFF" stroke="#020202" stroke-width="5"/>
+    <text x="0" y="7" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle" fill="#020202" letter-spacing="1">SPILL IT</text>
+  </g>
+</svg>

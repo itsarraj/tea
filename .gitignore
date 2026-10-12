@@ -1,0 +1,97 @@
+# ============================================================
+# Environment & Secrets (Root & Subprojects)
+# ============================================================
+.env
+.env.*
+!.env.example
+!.env.*.example
+!*.env.example
+!env.example
+
+# Sensitive application configuration files
+configuration.yaml
+configuration.*.yaml
+configuration.json
+configuration.*.json
+!configuration.example.yaml
+!configuration.*.example.yaml
+!configuration.example.json
+!configuration.*.example.json
+
+# Keystores, certificates & credentials
+*.jks
+*.keystore
+!debug.keystore
+!**/debug.keystore
+*.p8
+*.p12
+*.key
+*.pem
+!play-store/**/*.pem
+!**/play-store/**/*.pem
+*.mobileprovision
+google-services.json
+**/google-services.json
+
+# ============================================================
+# Dependencies & Build Outputs
+# ============================================================
+# Node / Frontend / Mobile
+node_modules/
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.expo/
+.expo-shared/
+web-build/
+*.tsbuildinfo
+.eslintcache
+
+# Rust / Cargo
+target/
+**/target/
+Cargo.lock
+**/*.rs.bk
+
+# Android & iOS native builds
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/.cxx/
+ios/build/
+ios/Pods/
+ios/DerivedData/
+*.ipa
+*.apk
+*.aab
+
+# Uploads & Media
+/uploads/
+uploads/
+**/uploads/
+data/
+
+# Logs & Runtime
+*.log
+*.pid
+server.log
+server.pid
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.cache/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+*.bak
+*.tmp

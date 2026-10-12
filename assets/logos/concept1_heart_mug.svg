@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rounded App Icon Background -->
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="#ECE6C2"/>
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="none" stroke="#020202" stroke-width="14"/>
+
+  <!-- Accents / Retro Sparkles -->
+  <path d="M 408 88 Q 408 122 438 122 Q 408 122 408 156 Q 408 122 378 122 Q 408 122 408 88 Z" 
+        fill="#0EA8FF" stroke="#020202" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="448" cy="76" r="6" fill="#FFD166" stroke="#020202" stroke-width="4"/>
+  <circle cx="76" cy="190" r="8" fill="#FFD166" stroke="#020202" stroke-width="5"/>
+  <path d="M 80 120 Q 80 138 96 138 Q 80 138 80 156 Q 80 138 64 138 Q 80 138 80 120 Z" 
+        fill="#73BDA8" stroke="#020202" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- MAIN ARTWORK GROUP -->
+  <g id="artwork">
+
+    <!-- HARD OFFSET SHADOW (All unified offset dx=12, dy=12) -->
+    <g transform="translate(12, 12)" fill="#020202" stroke="#020202">
+      <!-- Heart Shadow -->
+      <path d="M 256 68 
+               C 214 12, 136 38, 140 114 
+               C 143 166, 206 208, 256 242 
+               C 306 208, 369 166, 372 114 
+               C 376 38, 298 12, 256 68 Z" stroke-width="14" stroke-linejoin="round"/>
+      <!-- Handle Shadow -->
+      <path d="M 330 290 C 420 290 420 395 330 395" fill="none" stroke-width="36" stroke-linecap="round"/>
+      <!-- Cup Shadow -->
+      <path d="M 145 252 L 156 392 C 158 424 190 440 256 440 C 322 440 354 424 356 392 L 367 252 Z" stroke-width="14" stroke-linejoin="round"/>
+      <!-- Tag Shadow -->
+      <rect x="94" y="348" width="46" height="58" rx="8" transform="rotate(-15 117 377)"/>
+    </g>
+
+    <!-- STEAM HEART -->
+    <g id="steam-heart">
+      <!-- Outer Heart -->
+      <path d="M 256 68 
+               C 214 12, 136 38, 140 114 
+               C 143 166, 206 208, 256 242 
+               C 306 208, 369 166, 372 114 
+               C 376 38, 298 12, 256 68 Z"
+            fill="#EF476F" stroke="#020202" stroke-width="13" stroke-linejoin="round"/>
+      
+      <!-- Inner Heart Highlight -->
+      <path d="M 256 94 
+               C 226 52, 168 72, 171 126 
+               C 173 162, 218 196, 256 222 
+               C 294 196, 339 162, 341 126 
+               C 344 72, 286 52, 256 94 Z"
+            fill="#FF8CA3" opacity="0.6"/>
+
+      <!-- Rising Steam Curls within and below heart -->
+      <path d="M 215 244 C 200 220, 200 190, 222 170" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+      <path d="M 295 244 C 310 220, 310 190, 288 170" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+    </g>
+
+    <!-- CUP HANDLE -->
+    <path d="M 330 290 C 420 290 420 395 330 395" 
+          fill="none" stroke="#020202" stroke-width="36" stroke-linecap="round"/>
+    <path d="M 330 290 C 420 290 420 395 330 395" 
+          fill="none" stroke="#73BDA8" stroke-width="18" stroke-linecap="round"/>
+
+    <!-- CUP BODY -->
+    <path d="M 145 252 L 156 392 C 158 424 190 440 256 440 C 322 440 354 424 356 392 L 367 252 Z" 
+          fill="#73BDA8" stroke="#020202" stroke-width="13" stroke-linejoin="round"/>
+
+    <!-- Cup Rim & Hot Tea -->
+    <ellipse cx="256" cy="252" rx="111" ry="24" fill="#020202"/>
+    <ellipse cx="256" cy="250" rx="103" ry="17" fill="#CC6B49"/>
+    <!-- Liquid Gold Sheen -->
+    <path d="M 200 252 Q 256 260 312 252" fill="none" stroke="#FFD166" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- NEO-BRUTALIST EMBLEM ON CUP: Little dialogue heart badge -->
+    <g transform="translate(256, 350)">
+      <!-- Pill Badge -->
+      <rect x="-48" y="-22" width="96" height="44" rx="22" fill="#FFFFFF" stroke="#020202" stroke-width="6"/>
+      <!-- Red Flag & Green Flag / Heart combo -->
+      <path d="M -16 2 C -16 -6, -6 -12, 0 -6 C 6 -12, 16 -6, 16 2 C 16 9, 0 16, 0 16 C 0 16, -16 9, -16 2 Z" 
+            fill="#EF476F" stroke="#020202" stroke-width="2.5"/>
+      <circle cx="-28" cy="2" r="3" fill="#020202"/>
+      <circle cx="28" cy="2" r="3" fill="#020202"/>
+    </g>
+
+    <!-- TEABAG STRING & DANGLE TAG -->
+    <path d="M 185 252 Q 148 266 134 300 Q 124 326 122 352" 
+          fill="none" stroke="#020202" stroke-width="5" stroke-dasharray="7 5" stroke-linecap="round"/>
+
+    <!-- Hanging Tag -->
+    <g transform="rotate(-15 117 377)">
+      <rect x="94" y="348" width="46" height="58" rx="8" 
+            fill="#0EA8FF" stroke="#020202" stroke-width="6"/>
+      <circle cx="117" cy="358" r="4.5" fill="#020202"/>
+      <!-- Stamped heart on tag -->
+      <path d="M 117 372 C 113 367 106 369 106 375 C 106 381 117 388 117 388 C 117 388 128 381 128 375 C 128 369 121 367 117 372 Z"
+            fill="#FFFFFF" stroke="#020202" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+
+  </g>
+</svg>

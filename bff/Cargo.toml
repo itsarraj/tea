@@ -1,0 +1,47 @@
+[package]
+name = "bff"
+version = "0.2.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4"
+actix-cors = "0.7"
+actix-web-httpauth = "0.8"
+actix-multipart = "0.7"
+actix-files = "0.6"
+sqlx = { version = "0.8", features = [
+    "runtime-tokio",
+    "tls-native-tls",
+    "postgres",
+    "uuid",
+    "chrono",
+    "json",
+] }
+dotenvy = "0.15"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+uuid = { version = "1", features = ["v4", "serde"] }
+config = "0.14"
+chrono = { version = "0.4", features = ["serde"] }
+bcrypt = "0.15"
+jsonwebtoken = "9"
+redis = { version = "0.27", features = ["tokio-comp", "connection-manager"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "fs"] }
+log = "0.4"
+env_logger = "0.11"
+thiserror = "1"
+reqwest = { version = "0.12", features = ["json"] }
+bytes = "1"
+base64 = "0.22"
+sha2 = "0.10"
+rand = "0.8"
+futures-util = "0.3"
+async-trait = "0.1"
+hex = "0.4"
+urlencoding = "2"
+hmac = "0.12"
+object_store = { version = "0.13", default-features = false, features = ["aws"] }
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp"] }
+fast_image_resize = { version = "5", features = ["image"] }
+actix-ws = "0.3"
+tokio-stream = "0.1"

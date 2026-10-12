@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Full-bleed background for Google Play Store (Google automatically clips to squircle) -->
+  <rect width="512" height="512" fill="#ECE6C2"/>
+  
+  <!-- Outer neo-brutalist border frame -->
+  <rect x="16" y="16" width="480" height="480" rx="84" fill="#ECE6C2" stroke="#020202" stroke-width="12"/>
+
+  <!-- Neo-Brutalist Sparkles & Dots -->
+  <!-- Top Right Electric Blue 4-point Star -->
+  <path d="M 414 78 Q 414 114 446 114 Q 414 114 414 150 Q 414 114 382 114 Q 414 114 414 78 Z" 
+        fill="#0EA8FF" stroke="#020202" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="452" cy="64" r="6.5" fill="#FFD166" stroke="#020202" stroke-width="4.5"/>
+  <!-- Top Left Mint Star & Yellow Dot -->
+  <path d="M 72 108 Q 72 126 88 126 Q 72 126 72 144 Q 72 126 56 126 Q 72 126 72 108 Z" 
+        fill="#73BDA8" stroke="#020202" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="68" cy="180" r="7.5" fill="#FFD166" stroke="#020202" stroke-width="5"/>
+
+  <!-- UNIFIED NEO-BRUTALIST HARD SHADOW (dx=14, dy=14) -->
+  <g transform="translate(14, 14)" fill="#020202" stroke="#020202">
+    <!-- Heart Steam Shadow -->
+    <path d="M 256 62 
+             C 214 6, 134 32, 138 110 
+             C 142 164, 206 208, 256 242 
+             C 306 208, 370 164, 374 110 
+             C 378 32, 298 6, 256 62 Z" stroke-width="14" stroke-linejoin="round"/>
+
+    <!-- Handle Shadow -->
+    <path d="M 330 278 C 426 278 426 380 330 380" fill="none" stroke-width="36" stroke-linecap="round"/>
+
+    <!-- Cup Body Shadow -->
+    <path d="M 142 242 L 156 376 C 158 406 186 420 256 420 C 326 420 354 406 356 376 L 370 242 Z" stroke-width="14" stroke-linejoin="round"/>
+
+    <!-- Saucer Shadow -->
+    <path d="M 112 418 C 112 408 150 404 256 404 C 362 404 400 408 400 418 C 400 434 362 444 256 444 C 150 444 112 434 112 418 Z" stroke-width="14"/>
+
+    <!-- Tag Shadow -->
+    <rect x="86" y="335" width="46" height="58" rx="8" transform="rotate(-15 109 364)"/>
+  </g>
+
+  <!-- STEAM HEART (Romantic Floating Steam) -->
+  <g id="steam-heart">
+    <!-- Main Heart Shape (Coral Red / Passion) -->
+    <path d="M 256 62 
+             C 214 6, 134 32, 138 110 
+             C 142 164, 206 208, 256 242 
+             C 306 208, 370 164, 374 110 
+             C 378 32, 298 6, 256 62 Z" 
+          fill="#EF476F" stroke="#020202" stroke-width="13" stroke-linejoin="round"/>
+    
+    <!-- Heart Inner Soft Highlight -->
+    <path d="M 256 90 
+             C 226 48, 168 68, 171 124 
+             C 173 160, 218 195, 256 222 
+             C 294 195, 339 160, 341 124 
+             C 344 68, 286 48, 256 90 Z" 
+          fill="#FFA69E" opacity="0.9" stroke="#020202" stroke-width="4" stroke-linejoin="round"/>
+
+    <!-- Top Left Gloss Specular -->
+    <ellipse cx="198" cy="96" rx="14" ry="24" transform="rotate(-28 198 96)" fill="#FFFFFF"/>
+  </g>
+
+  <!-- TEACUP SAUCER (Mint Green Grounding Plate) -->
+  <path d="M 112 418 C 112 408 150 404 256 404 C 362 404 400 408 400 418 C 400 434 362 444 256 444 C 150 444 112 434 112 418 Z" 
+        fill="#73BDA8" stroke="#020202" stroke-width="13" stroke-linejoin="round"/>
+  <ellipse cx="256" cy="417" rx="116" ry="8" fill="none" stroke="#020202" stroke-width="5" stroke-dasharray="10 6"/>
+
+  <!-- CUP HANDLE (Chunky Neo-Brutalist Arch) -->
+  <path d="M 330 278 C 426 278 426 380 330 380" 
+        fill="none" stroke="#020202" stroke-width="36" stroke-linecap="round"/>
+  <path d="M 330 278 C 402 278 402 380 330 380" 
+        fill="none" stroke="#FFD166" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- CUP MAIN BODY (Warm Sunny Yellow #FFD166) -->
+  <path d="M 142 242 L 156 376 C 158 406 186 420 256 420 C 326 420 354 406 356 376 L 370 242 Z" 
+        fill="#FFD166" stroke="#020202" stroke-width="13" stroke-linejoin="round"/>
+
+  <!-- Cup Left Specular Highlight -->
+  <path d="M 166 262 L 174 362 C 176 374 184 382 196 386 L 192 262 Z" 
+        fill="#FFFFFF" opacity="0.55"/>
+
+  <!-- CUP RIM -->
+  <ellipse cx="256" cy="242" rx="114" ry="22" 
+           fill="#4A2E18" stroke="#020202" stroke-width="13"/>
+  <!-- Steaming Tea Liquid Surface -->
+  <ellipse cx="256" cy="243" rx="98" ry="14" fill="#6F432A"/>
+
+  <!-- FRONT LABEL / BADGE: "TEA" -->
+  <g transform="translate(256, 332)">
+    <!-- Drop shadow -->
+    <rect x="-51" y="-17" width="112" height="44" rx="10" fill="#020202"/>
+    <!-- Pill ticket -->
+    <rect x="-56" y="-22" width="112" height="44" rx="10" fill="#FFFFFF" stroke="#020202" stroke-width="6"/>
+    
+    <!-- Vector "T" -->
+    <path d="M -36 -10 L -18 -10 L -18 -4 L -24 -4 L -24 10 L -30 10 L -30 -4 L -36 -4 Z" fill="#020202"/>
+    <!-- Vector "E" -->
+    <path d="M -11 -10 L 7 -10 L 7 -4 L -5 -4 L -5 -2 L 5 -2 L 5 3 L -5 3 L -5 5 L 7 5 L 7 10 L -11 10 Z" fill="#020202"/>
+    <!-- Vector "A" -->
+    <path d="M 14 10 L 22 -10 L 29 -10 L 37 10 L 31 10 L 29 4 L 22 4 L 20 10 Z M 23 -1 L 28 -1 L 25.5 -6 Z" fill="#020202"/>
+  </g>
+
+  <!-- TEABAG STRING & DANGLING TAG -->
+  <!-- Draped String -->
+  <path d="M 180 242 Q 142 254 128 288 Q 118 314 116 340" 
+        fill="none" stroke="#020202" stroke-width="5.5" stroke-dasharray="7 5" stroke-linecap="round"/>
+
+  <!-- Hanging Tag (Electric Blue) -->
+  <g transform="rotate(-15 109 364)">
+    <rect x="86" y="335" width="46" height="58" rx="8" 
+          fill="#0EA8FF" stroke="#020202" stroke-width="6"/>
+    <!-- Punch hole -->
+    <circle cx="109" cy="345" r="4.5" fill="#020202"/>
+    <!-- Stamped Crisp White Heart on Tag -->
+    <path d="M 109 360 C 105 355 98 357 98 363 C 98 369 109 376 109 376 C 109 376 120 369 120 363 C 120 357 113 355 109 360 Z" 
+          fill="#FFFFFF" stroke="#020202" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+</svg>
